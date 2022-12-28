@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- 
+		meu amigo faziam anos que eu não fazia nada em html, super enferrujado.
+		nem usei o css ou bootstrap, fiquei com preguiça.
+
+		//-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pedro Augusto Página Html</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="https://pbs.twimg.com/media/FHKcWNgXoAUaZih.jpg">
+    <meta name="description" content="corinthians!!" />
+
+   
+
+
+
+<style type="text/css">
+
+
+
+::-webkit-scrollbar {
+    width: 18px;
+    height:6px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+
+	/* bckg:#9c34cc; b1:#af68fd; btop:#af68fd; bbot:#af68fd;   */
+
+    background: #ffcd59;
+    border:6px solid #f54c6e;
+    border-top:4px solid #f54c6e ;
+    border-bottom:4px solid #f54c6e ;
+    cursor:pointer;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+    background:#f0443e;
+    border: 8px solid #f0c93e;
+    border-top:12px solid #f0c93e;
+    border-bottom:12px solid #f0c93e;
+
+}
+ 
+::-moz-selection {background:#5ced61;color:#eaffea}
+::selection {background:#5ced61;color:#eaffea;}
+
+
+
+* {
+    box-sizing:border-box;
+}
+body {
+    /* background:#484449 url(https://66.media.tumblr.com/ffab7cd3f5a59acd2526f3e15e203e21/5b63b68513ed61c8-3b/s2048x3072/d5c777c9e3f5af3c87be2bb968beea79bbf787c8.gif)
+    ;
+			#1f1838
+
+	*/
+    color:#fbf4ff;
+    background-color: #38181e;
+    font-family:Rubik;
+    font-size: 16px;
+    transition:.6s;
+    word-wrap:break-word;
+    line-height:160%;
+
+}
+
+
+nav {
+
+    /*padding:10px;
+    */grid-area:two;
+    width: auto;
+    color: #f44444;
+    line-height:150%;
+    font-size:.88em;
+    border:1px solid #f0264f;
+    border-radius:3px;
+    background-color: rgba(11, 170, 11, 0.8);
+
+}
+
+
+p {
+	/* hoje na casa do seu zé, para de olhar o código seu corno, tem nada melhor para fzr não?
+	*/
+		color: #fbf4ff;
+		text-shadow: 2px 2px #2b1010;
+		word-wrap: break-word;
+		font-size: 18px;
+		font-family: Times New Roman, serif;
+		transition:.5s;
+		text-decoration: none;
+
+}
+
+p:hover {
+	/* acima #9c34cc #9c77ea */
+    color:#ad4056;
+    transition:.5s; 
+
+
+ }
+
+a {
+	
+    text-decoration: none;
+    color:#f0264f;
+    transition:.5s; 
+    
+}
+   
+a:hover {
+	/* acima #9c34cc #9c77ea */
+    color:#ad4056;
+    transition:.5s; 
+}
+    
+h1 {    
+    text-align:center;
+    text-shadow: 2px 2px #2b1010;
+    padding:20px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    letter-spacing:2px; }
+ 
+h2 {
+	text-shadow: 2px 2px #2b1010;
+    text-align:center;
+    padding:20px;
+       font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight:normal; 
+    transition:.5s;
+
+
+}
+
+
+/* h2:hover {
+	text-shadow: 2px 2px #2b1010;
+    color:#f22727;
+    transition:.5s; 
+
+} */
+ 
+b {color:#a37dce; font-weight:bold; }
+i {color:#cbb7ea; font-style:italic;}
+
+
+
+aside {
+    position:fixed;
+    height:0px;
+    top:100px;
+    left:8%;
+    z-index:0;
+    transform:scale(1.14);
+    width:256px;
+    display:grid;
+    grid-template-areas:
+    "one one two two"
+    "three three two two"
+    "four four four four"
+    "five five five five"
+    ;
+    transition:.8s;
+    column-gap:8px;
+    
+}
+
+
+li {
+
+	 text-align:center;
+    text-shadow: 2px 2px #2b1010;
+    padding:20px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    letter-spacing:2px; }
+
+}
+
+
+.nav {
+
+	color: #33333;
+
+
+
+}
+
+
+.icon {
+    width:128px;
+    grid-area:one;
+}
+
+.icon img {
+
+	/* #8000ff  */
+
+    width:100%;
+    border:1px solid #f0264f;
+    border-radius:4px;
+}
+
+.box {
+    
+    width:calc(128px - 10px);
+    padding:10px;
+    grid-area:two;
+    line-height:150%;
+    font-size:.88em;
+    border:1px solid #f0264f;
+    border-radius:3px;
+    background-color: rgba(13, 0, 26, .8);
+   
+}
+
+.art {
+
+	text-align: left;
+	color: #38181e; 
+	transition:.5s;
+
+
+}
+
+.art:hover {
+
+	text-shadow: 2px 2px #2b1010;
+    color:#f44444;
+    transition:.5s; 
+
+
+}
+#sexo{
+   outline: none;
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">Computação Em Nuvem</a>
+        <button id="sexo" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span  class="navbar-toggler-icon"></span>
+        </button>
+      
+      
+      
+      
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+             <li class="nav-item">
+              <a class="nav-link" href="Tamires Barbosa.html">Tamires</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lucas.html">Lucas</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="Pedro.html">Pedro</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="Cleyton.html">Cleyton</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Renan.html">Renan</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="Wanderson.html">Wanderson</a>
+            </li> 
+          </ul>
+        </div>
+      </nav>
+
+
+	<main class="container">
+
+
+</br>
+
+<center>
+
+	<div class="icon"><img src="https://pbs.twimg.com/profile_images/1500478793798287360/qUvAG8YO_400x400.jpg"></div>
+
+   <!-- <div class="icon"><img src="https://c.tenor.com/ersGVmje0-wAAAAj/wawa-new.gif"></div> 
+
+    <div class="box"> Gatos são legais.<br /> 💜 </div>
+-->
+
+<br>
+
+	<div class="box"> página html</div>
+
+</center>
+
+
+
+	<style type="text/css">
+	</style>
+
+<div class="container mt-4" style="text-align: center;">
+	<!--
+
+		<img src="https://i.pinimg.com/236x/d1/8d/3f/d18d3f6e1625b3091ac3e1e1cfb658a5--tuxedos-tuxedo-cats.jpg"> 
+
+	--> 
+
+</br>
+
+  <h1>Pedro Augusto. </br></h1>
+<h2>202204102188 </h2>
+
+</br> 
+
+<div class="" style="text-align: center;"> <p>Rodando no servidor! </p> </div>
+
+<!--<div><a href="https://www.reddit.com/r/aww/comments/i8jxx6/the_darkness_the_destroyer_of_worlds/">
+	clique para uma surpresa...
+
+</a></div>
+-->
+<a href="index.html"> home </a>
+
+
+</div>
+<br>
+<br>
+
+	<div class="art">
+		voto é secreto!!
+
+	</div>
+
+
+
+
+
+
+</main>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

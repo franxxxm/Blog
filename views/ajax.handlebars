@@ -1,0 +1,39 @@
+
+<input type="search" id="pesquisar" onkeyup="send(this)">
+
+<h1 id="aqui"></h1>
+
+<script>
+    function send(e){
+        const aqui = document.getElementById('aqui');
+        var matchA  = e.value.match(/^[a-zA-Z]*/)// aqui só tera letras e nenhum caractere especial
+        var match = e.value.match(/\s*/); // \s significa um espaço em branco e o * operado significa 0 ou infinito
+        console.log(matchA[0].length)      
+        if(match[0] === e.value){
+            e.value = e.value.replace(/^\s+|\s*$/gm,'');
+            aqui.innerHTML = ''
+            return;
+        }
+        if(matchA[0] === e.value){ 
+            fetch('ajax',{
+                method:'POST',
+                headers:{'Content-Type':'application/json'},//sempre usar
+                body: JSON.stringify({pesquisa: e.value})//passando o valor do input
+                //puxando os dados da pagina post com json
+            }).then(res => res.json()).then(data => {
+                var dados = data.dados
+                aqui.innerHTML = ' ';
+                if(dados.length < 1){
+                    aqui.innerHTML = 'nenhuma categoria foi encontrada...'
+                    return;
+                }
+                dados.forEach((item, index)=>{
+                    aqui.innerHTML += item.nome+"<hr>"
+                })
+                return;  
+            })
+            return;
+        }    
+    }
+</script>
+    

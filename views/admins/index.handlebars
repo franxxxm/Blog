@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <h1 class="display-4">bem vindo ao blog do node</h1>
+  <p class="lead">blog de postagem de node, com sistema de usuario e admin</p>
+  <hr class="my-4">
+    <a class="btn btn-primary btn-lg" href="usuario/cadastro" role="button">criar conta</a>
+  </p>
+</div>
+<hr>
+<h2>Postagens recentes:</h2>
+{{#each dados}}
+<div class="card mt-4">
+    <div class="card-body">
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p>
+        <a href="/admin/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+        <hr>
+        <small>categoria {{categoria.nome}}</small><br>
+        <small>Data de publicação: {{createdAt}}</small>
+    </div>
+</div>
+{{else}}
+    <h5>nenhuma postagem foi encontrada</h5>
+{{/each}}
